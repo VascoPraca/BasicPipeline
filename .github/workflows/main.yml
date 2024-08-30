@@ -26,3 +26,7 @@ jobs:
       - name: Run Docker container
         run: |
           docker run -d -p 8000:8000 --name my-flask-container my-flask-app
+      
+      - name: Run Tests
+        run: |
+          docker exec my-flask-container pytest
